@@ -27,5 +27,27 @@ Output: 0
 `;
 
 export const answer = `
-
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    let result = 0;
+    let negativeFlag = false;
+    
+    if (x === 0) {
+        result = 0;
+    } else if (x < 0) {
+        negativeFlag = true;
+        x *= (-1);
+    }
+    
+    
+    
+    
+    if (negativeFlag) {
+        result *= (-1);
+    }
+    console.log(x, result, negativeFlag);
+};
 `;
