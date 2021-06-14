@@ -34,20 +34,37 @@ export const answer = `
 var reverse = function(x) {
     let result = 0;
     let negativeFlag = false;
-    
+    let count = 0;
+    const ten = 10;
     if (x === 0) {
         result = 0;
     } else if (x < 0) {
         negativeFlag = true;
         x *= (-1);
+    } 
+
+    console.log(Math.pow(2,31) -1);
+    console.log(x);
+    console.log(Math.pow(2,31) -1);
+    let param = x;
+    
+    while (param > 9) {
+        
+        result += (param%ten);
+        result *= 10;
+        param = Math.floor(param/ten);
+        console.log(param, result);
     }
-    
-    
-    
+    result += param;
     
     if (negativeFlag) {
         result *= (-1);
     }
-    console.log(x, result, negativeFlag);
+        if (result >= Math.pow(2,31)) {
+        return 0;
+    } else if (result < (-1)*Math.pow(2,31)) {
+        return 0;
+    }
+    return result;
 };
 `;
