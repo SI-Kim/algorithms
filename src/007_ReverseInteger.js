@@ -26,7 +26,7 @@ Input: x = 0
 Output: 0
 `;
 
-export const contents = () => {
+export const contents = (param) => {
   let result = "";
   const aa = "22";
 
