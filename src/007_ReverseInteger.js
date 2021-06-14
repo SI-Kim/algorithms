@@ -26,10 +26,18 @@ Input: x = 0
 Output: 0
 `;
 
-export const contents = (param) => {
-  let result = "";
-  const aa = "22";
+export const answer = `
+  let result = 0;
+  let negativeFlag = false;
+  if (param === 0) {
+    result = 0;
+  } else if (param < 0) {
+    negativeFlag = true;
+  }
+  result = param;
+  if (negativeFlag) {
+    result *= -1;
+  }
 
-  result += aa;
-  return result;
-};
+  return param;
+`;
