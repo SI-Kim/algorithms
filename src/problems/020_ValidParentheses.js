@@ -1,5 +1,5 @@
-export const title = "020. Valid Parentheses";
-export const Q = `Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+const title = "020. Valid Parentheses";
+const Q = `Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
 
@@ -35,7 +35,7 @@ Output: true
 
 `;
 
-export const answer = `
+const answer = `
 /**
  * @param {string} s
  * @return {boolean}
@@ -90,3 +90,9 @@ function checkOpen(char) {
 }
 
 `;
+
+export let object = {
+  title: title,
+  question: Q,
+  answer: answer
+};

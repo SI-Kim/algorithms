@@ -1,8 +1,10 @@
 import "./styles.css";
-import { title, answer, Q } from "./007_ReverseInteger";
+import Datas from "./public/Datas";
+import Selection from "./layouts/Selection";
 
 document.getElementById("app").innerHTML = `
-<h1>${title}</h1>
-<p>${Q}</p>
-<div><b>${answer}</b></div>
+${Selection}
+<h1></h1>
+<p></p>
+<div><b></b></div>
 `;
