@@ -7,9 +7,9 @@ Datas.map((object) => {
 
 let Selection = `
 <div 
-  style="border: 1px solid; width: 30vw; height: 80vh" 
+  style="border: 1px solid; width: 30vw; height: 80vh; text-align: center;" 
   id="selection">
-  <form>
+  <form style="margin-top: 5%">
     <select>
       ${option}
     </select>
