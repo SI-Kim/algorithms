@@ -42,8 +42,51 @@ export const answer = `
  */
 var isValid = function(s) {
     let brackets = {'(': ')', '{': '}', '[': ']'};
-    console.log(brackets);
-    console.log(brackets['{']);
+    const arr = s.split('');
+    let stack = [];
+    let result = true;
+    
+    if(!checkOpen(s[0])) {
+        result = false;
+        return result;
+    }
+    
+    arr.forEach(function(char) {
+        // open
+        if (checkOpen(char)) {
+            stack.push(char);
+        // close
+        } else {
+            const aa = stack.pop();
+            
+            if (char !== brackets[aa]) {
+                result = false;
+                return;
+            }
+        }
+       
+    });
+    
+    if (lengCheck(stack)) {
+        result = false;
+    }
+    
+      return result;
 };
+
+
+function lengCheck(arr) {
+    if (arr.length > 0) {
+        return true;
+    }
+}
+
+function checkOpen(char) {
+    if (char === '(' || char === '{' || char === '[') {
+        return true
+    } else {
+        return false;
+    }
+}
 
 `;
